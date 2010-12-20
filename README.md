@@ -1,13 +1,16 @@
 SpreeEditor
 ===========
 
-Introduction goes here.
+Rich editor for Spree. Uses Yahoo UI Editor with Image and File uploading.
+Can be used with any model.
 
 
 Example
 =======
 
-Example goes here.
+In _form.html.erb:
+
+    <%= rich_editor(:id => 'page_body', :object => @page) %>
 
 
-Copyright (c) 2010 [name of extension creator], released under the New BSD License
+Copyright (c) 2010 [divineforest], released under the New BSD License

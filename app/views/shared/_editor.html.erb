@@ -187,6 +187,9 @@
 		YAHOO.util.Dom.setStyle(el, 'left', '');
 		YAHOO.util.Dom.setStyle(el, 'position', 'static');
 		YAHOO.util.Dom.setStyle(el, 'width', '780px');
+
+		<%= editor_id %>_editor.set('handleSubmit', false);
+
 		return false;
 	});
 	$("#<%= editor_id %>_switch_rich").click(function() {
@@ -203,6 +206,9 @@
 		<%= editor_id %>_editor.get('element_cont').addClass('yui-editor-container');
 		<%= editor_id %>_editor._setDesignMode('on');
 		<%= editor_id %>_editor.setEditorHTML(<%= editor_id %>_editor.get('textarea').value);
+
+		<%= editor_id %>_editor.set('handleSubmit', true);
+
 		return false;
 	});
 </script>

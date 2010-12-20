@@ -15,8 +15,6 @@ en:
     hide_more_fields: Hide more fields
     switch_simple: Switch to Simple Editor
     switch_rich: Switch to Rich Editor
-    no_link: "No link<br/>Add Slug Or Foreign Link"
-    in_menu: Menu
     sidebar: Sidebar
     header: Header
     footer: Footer

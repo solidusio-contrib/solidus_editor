@@ -133,7 +133,7 @@
 			name: 'content_image[attachment]',
 			action: '/content_images',
 			enctype: 'multipart/form-data',
-			params: {'content_image[viewable_type]': '<%= object.class.name %>', 'content_image[viewable_id]': '<%= object.id %>]'},
+			params: {'content_image[viewable_type]': '<%= object.class.name %>', 'content_image[viewable_id]': '<%= object.id %>'},
 			autoSubmit: true,
 			onSubmit: function() {
 				$(".editor-mask-container").addClass("active");
@@ -149,7 +149,7 @@
 			name: 'content_file[attachment]',
 			action: '/content_files',
 			enctype: 'multipart/form-data',
-			params: {'content_file[viewable_type]': '<%= object.class.name %>', 'content_file[viewable_id]': '<%= @object.id %>]'},
+			params: {'content_file[viewable_type]': '<%= object.class.name %>', 'content_file[viewable_id]': '<%= @object.id %>'},
 			autoSubmit: true,
 			onSubmit: function() {
 				$(".editor-mask-container").addClass("active");

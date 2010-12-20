@@ -19,6 +19,8 @@
 <!-- Source file for Rich Text Editor-->
 <script src="http://yui.yahooapis.com/2.8.2r1/build/editor/editor-min.js"></script>
 
+<%= javascript_include_tag 'jquery.ocupload' %>
+
 <script type="text/javascript" charset="utf-8">
 	var <%= editor_id %>_editor = new YAHOO.widget.Editor('<%= editor_id %>', {
 		height: '300px',

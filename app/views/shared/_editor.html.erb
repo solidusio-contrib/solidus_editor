@@ -172,15 +172,15 @@
 		return false;
 	});
 	$("#<%= editor_id %>_switch_simple").click(function() {
-		page_body_editor.saveHTML();
+		<%= editor_id %>_editor.saveHTML();
 
-		var fc = page_body_editor.get('element').previousSibling,
-		    el = page_body_editor.get('element');
+		var fc = <%= editor_id %>_editor.get('element').previousSibling,
+		    el = <%= editor_id %>_editor.get('element');
 
 		YAHOO.util.Dom.setStyle(fc, 'position', 'absolute');
 		YAHOO.util.Dom.setStyle(fc, 'top', '-9999px');
 		YAHOO.util.Dom.setStyle(fc, 'left', '-9999px');
-		page_body_editor.get('element_cont').removeClass('yui-editor-container');
+		<%= editor_id %>_editor.get('element_cont').removeClass('yui-editor-container');
 		YAHOO.util.Dom.setStyle(el, 'visibility', 'visible');
 		YAHOO.util.Dom.setStyle(el, 'top', '');
 		YAHOO.util.Dom.setStyle(el, 'left', '');
@@ -189,8 +189,8 @@
 		return false;
 	});
 	$("#<%= editor_id %>_switch_rich").click(function() {
-		var fc = page_body_editor.get('element').previousSibling,
-		    el = page_body_editor.get('element');
+		var fc = <%= editor_id %>_editor.get('element').previousSibling,
+		    el = <%= editor_id %>_editor.get('element');
 
 		YAHOO.util.Dom.setStyle(fc, 'position', 'static');
 		YAHOO.util.Dom.setStyle(fc, 'top', '0');
@@ -199,9 +199,9 @@
 		YAHOO.util.Dom.setStyle(el, 'top', '-9999px');
 		YAHOO.util.Dom.setStyle(el, 'left', '-9999px');
 		YAHOO.util.Dom.setStyle(el, 'position', 'absolute');
-		page_body_editor.get('element_cont').addClass('yui-editor-container');
-		page_body_editor._setDesignMode('on');
-		page_body_editor.setEditorHTML(page_body_editor.get('textarea').value);
+		<%= editor_id %>_editor.get('element_cont').addClass('yui-editor-container');
+		<%= editor_id %>_editor._setDesignMode('on');
+		<%= editor_id %>_editor.setEditorHTML(<%= editor_id %>_editor.get('textarea').value);
 		return false;
 	});
 </script>

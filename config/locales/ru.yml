@@ -9,7 +9,7 @@ ru:
     insert_item: Вставка
     insert_image: Вставить картинки по адресу
     upload_image: Загрузить картинку
-    upload_image: Загрузить файл
+    upload_file: Загрузить файл
     show_more_fields: Показать дополнительные поля
     hide_more_fields: Скрыть дополнительные поля
     switch_simple: Переключиться на простой редактор

@@ -24,7 +24,7 @@
 <script type="text/javascript" charset="utf-8">
 	var <%= editor_id %>_editor = new YAHOO.widget.Editor('<%= editor_id %>', {
 		height: '350px',
-		width: '790px',
+		width: 'auto',
 		animate: true,
 		handleSubmit: true,
 		toolbar: {
@@ -108,26 +108,20 @@
 			            { type: 'push', label: 'HTML Link CTRL + SHIFT + L', value: 'createlink', disabled: true },
 			            { type: 'push', label: '<%= t("editor.insert_image") %>', value: 'insertimage' }
 			        ]
+			    },
+			    { type: 'separator' },
+			    { group: 'uploaditem', label: '<%= t("editor.upload_file") %>',
+			        buttons: [
+			            { type: 'push', label: '<%= t("editor.upload_image") %>', value: 'imageUpload' },
+		              { type: 'push', label: '<%= t("editor.upload_file") %>', value: 'fileUpload' }
+			        ]
 			    }
+			    
 			]
 		}
 	});
 
-	<%= editor_id %>_editor.on('toolbarLoaded', function() {
-		var imageUploadConfig = {
-			type: 'push',
-			label: '<%= t("editor.upload_image") %>',
-			value: 'imageUpload'
-		};
-		<%= editor_id %>_editor.toolbar.addButtonToGroup(imageUploadConfig, 'insertitem');
 
-		var fileUploadConfig = {
-			type: 'push',
-			label: '<%= t("editor.upload_file") %>',
-			value: 'fileUpload'
-		};
-		<%= editor_id %>_editor.toolbar.addButtonToGroup(fileUploadConfig, 'insertitem');
-	});
 
 	<%= editor_id %>_editor.addListener('editorContentLoaded', function() {
 		$(".yui-toolbar-imageUpload").upload({

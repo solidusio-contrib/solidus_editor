@@ -10,7 +10,7 @@ en:
     insert_item: Insert Item
     insert_image: Insert Image
     upload_image: Upload Image
-    upload_image: Upload File
+    upload_file: Upload File
     show_more_fields: Show more fields
     hide_more_fields: Hide more fields
     switch_simple: Switch to Simple Editor

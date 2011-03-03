@@ -4,7 +4,6 @@ require 'helpers/editor_helper'
 
 module SpreeEditor
   class Engine < Rails::Engine
-
     config.autoload_paths += %W(#{config.root}/lib)
 
     def self.activate
@@ -15,8 +14,10 @@ module SpreeEditor
 
     config.to_prepare &method(:activate).to_proc
   end
+
+  EditorEngines = %w(YUIRichEditor WYMEditor TinyMCE)
 end
 
-ActionView::Base.class_eval do
-  include EditorHelper
-end
+#ActionView::Base.class_eval do
+#  include EditorHelper
+#end

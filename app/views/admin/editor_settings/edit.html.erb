@@ -1,0 +1,18 @@
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<h1><%= t('rich_editor') %></h1>
+
+<%= form_tag(admin_editor_settings_path, :method => :put) do %>
+    <p>
+      <label><%= t('enable_rich_editor') %>:</label>
+      <%= check_box_tag('preferences[enabled]', '1', Spree::Editor::Config[:enabled]) %>
+    </p>
+    <p>
+      <label><%= t('rich_editor_engine') %></label>
+      <%= select_tag 'preferences[current_editor]', options_for_select(SpreeEditor::EditorEngines, Spree::Editor::Config[:current_editor])  %>
+    </p>
+    <p class="form-buttons">
+      <%= button t('update') %>
+      <%= t("or") %> <%= link_to t("cancel"), admin_editor_settings_url %>
+    </p>
+<% end %>

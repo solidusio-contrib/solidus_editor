@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-  resources :content_images, :only => [:create]
-  resources :content_files, :only => [:create]
-
+  namespace :admin do
+    resource :editor_settings, :only => ['show', 'update', 'edit']
+  end
 end

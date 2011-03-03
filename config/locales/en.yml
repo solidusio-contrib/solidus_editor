@@ -1,21 +1,6 @@
 ---
 en:
-  editor:
-    loading: Loading
-    font_name_and_size: Font Name and Size
-    font_style: Font Style
-    alignment: Alignment
-    paragraph_style: Paragraph Style
-    indenting_and_lists: "Indenting/Lists"
-    insert_item: Insert Item
-    insert_image: Insert Image
-    upload_image: Upload Image
-    upload_file: Upload File
-    show_more_fields: Show more fields
-    hide_more_fields: Hide more fields
-    switch_simple: Switch to Simple Editor
-    switch_rich: Switch to Rich Editor
-    sidebar: Sidebar
-    header: Header
-    footer: Footer
-    enter_file_name: Enter file name
+  enable_rich_editor: "Enable Rich Editor"
+  rich_editor: "Rich Editor"
+  rich_editor_description: "Configure rich editor Spree settings."
+  rich_editor_engine: "Rich Editor engine"

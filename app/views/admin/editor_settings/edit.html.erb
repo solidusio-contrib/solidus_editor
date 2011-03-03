@@ -8,7 +8,7 @@
       <%= check_box_tag('preferences[enabled]', '1', Spree::Editor::Config[:enabled]) %>
     </p>
     <p>
-      <label><%= t('rich_editor_engine') %></label>
+      <label><%= t('rich_editor_engine') %>:</label>
       <%= select_tag 'preferences[current_editor]', options_for_select(SpreeEditor::EditorEngines, Spree::Editor::Config[:current_editor])  %>
     </p>
     <p class="form-buttons">

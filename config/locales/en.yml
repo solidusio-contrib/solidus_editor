@@ -2,5 +2,5 @@
 en:
   enable_rich_editor: "Enable Rich Editor"
   rich_editor: "Rich Editor"
-  rich_editor_description: "Configure rich editor Spree settings."
+  rich_editor_description: "Configure Rich Editor settings."
   rich_editor_engine: "Rich Editor engine"

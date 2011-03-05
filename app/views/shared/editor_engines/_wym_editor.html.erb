@@ -1,0 +1,8 @@
+<script type="text/javascript" src="/javascripts/wymeditor/jquery.wymeditor.min.js"></script>
+
+<script type="text/javascript">
+  $(function() {
+      var ids = [<%= ids.map{|id| "'##{id}'"}.join(', ') %>]
+      $(ids.join(', ')).wymeditor();
+  });
+</script>

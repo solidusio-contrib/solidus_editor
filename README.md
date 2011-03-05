@@ -1,16 +1,19 @@
 SpreeEditor
 ===========
 
-Rich editor for Spree. Uses Yahoo UI Editor with Image and File uploading.
-Can be used with any model.
+Rich editor for Spree. It implements different types of Rich Edotors:
 
+- YUI Rich Editor
+- WYM Editor
+- TinyMCE
 
 Example
 =======
 
-In _form.html.erb:
+Create config/initializers/editor_config.rb with following text:
 
-    <%= rich_editor(:id => 'page_body', :object => @page) %>
+	RICH_EDITOR_IDS = %w(product_description)
 
+And reload your server, enjoy!
 
 Copyright (c) 2010 [divineforest], released under the New BSD License

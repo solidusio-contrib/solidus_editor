@@ -1,6 +1,5 @@
 require 'spree_core'
 require 'spree_editor_hooks'
-require 'helpers/editor_helper'
 
 module SpreeEditor
   class Engine < Rails::Engine
@@ -17,7 +16,3 @@ module SpreeEditor
 
   EditorEngines = %w(YUIRichEditor WYMEditor TinyMCE)
 end
-
-#ActionView::Base.class_eval do
-#  include EditorHelper
-#end

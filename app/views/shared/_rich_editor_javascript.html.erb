@@ -1,0 +1,7 @@
+<% is_enabled = Spree::Editor::Config[:enabled] %>
+<% current_editor = Spree::Editor::Config[:current_editor] %>
+
+<% if RICH_EDITOR_IDS and RICH_EDITOR_IDS.any? and is_enabled and not current_editor.empty? %>
+    <%= render :partial => "shared/editor_engines/#{Spree::Editor::Config[:current_editor].underscore}",
+               :locals => { :ids => RICH_EDITOR_IDS } %>
+<% end %>

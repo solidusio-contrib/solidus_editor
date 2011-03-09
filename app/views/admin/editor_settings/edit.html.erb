@@ -11,6 +11,11 @@
       <label><%= t('rich_editor_engine') %>:</label>
       <%= select_tag 'preferences[current_editor]', options_for_select(SpreeEditor::EditorEngines, Spree::Editor::Config[:current_editor])  %>
     </p>
+    <p>
+      <label><%= t('rich_editor_ids') %>:</label>
+      <%= text_field_tag 'preferences[ids]', Spree::Editor::Config[:ids]  %>
+      <small><%= t('rich_editor_ids_description') %></small>
+    </p>
     <p class="form-buttons">
       <%= button t('update') %>
       <%= t("or") %> <%= link_to t("cancel"), admin_editor_settings_url %>

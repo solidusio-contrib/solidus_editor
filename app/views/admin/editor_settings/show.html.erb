@@ -11,6 +11,10 @@
     <td><%= t('rich_editor_engine') %>:</td>
     <td><%= Spree::Editor::Config[:current_editor] %></td>
   </tr>
+  <tr>
+    <td><%= t('rich_editor_ids') %>:</td>
+    <td><%= Spree::Editor::Config[:ids] %></td>
+  </tr>
 </table>
 
 <p><%= link_to_with_icon 'edit', t("edit"), edit_admin_editor_settings_path %></p>

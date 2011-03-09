@@ -4,3 +4,5 @@ en:
   rich_editor: "Rich Editor"
   rich_editor_description: "Configure Rich Editor settings."
   rich_editor_engine: "Rich Editor engine"
+  rich_editor_ids: "Rich Editor Identificators"
+  rich_editor_ids_description: "List ids splitted by spaces here"

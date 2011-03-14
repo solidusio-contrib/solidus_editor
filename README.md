@@ -1,7 +1,7 @@
 SpreeEditor
 ===========
 
-Rich editor for Spree. It implements different types of Rich Edotors:
+Rich editor for Spree. It implements different types of Rich Editors:
 
 - YUI Rich Editor
 - WYM Editor

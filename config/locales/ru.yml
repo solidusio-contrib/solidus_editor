@@ -1,0 +1,45 @@
+---
+en:
+  editor:
+    align_center: Выровнять по центру
+    align_left: Выровнять по левому краю
+    align_right: Выровнять по правому краю
+    alignment: Выравнивание
+    background_color: Цвет фона
+    bold: Полужирный
+    create_an_ordered_list: Нумерованный список
+    create_an_unordered_list: Ненумерованный список
+    enter_file_name: Введите имя файла
+    font_name_and_size: Шрифт и размер
+    font_color: Цвет шрифта
+    font_style: Стиль шрифта
+    header: Заголовок
+    hide_more_fields: Скрыть дополнительные поля
+    html_link: HTML ссылка
+    indenting_and_lists: "Отступы/Списки"
+    insert_item: Вставить
+    insert_image: Вставить изображение
+    indent: Увеличить отступ
+    italic: Курсив
+    justify: Выключить строку
+    loading: Загрузка
+    normal: Нормальный
+    outdent: Уменьшить отступ
+    paragraph_style: Стиль параграфа
+    remove_formatting: Убрать форматирование
+    show_and_hide_hidden_elements: "Показать/Спрятать скрытые элементы"
+    show_more_fields: Показать больше полей
+    sidebar: Боковая панель
+    subscript: Нижний индекс
+    superscript: Верхний индекс
+    underline: Подчеркнутый
+    upload: Загрузить
+    upload_image: Загрузить изображение
+    upload_file: Загрузить файл
+    
+  enable_rich_editor: "Включить Визуальный Редактор"
+  rich_editor: "Визуальный Редактор"
+  rich_editor_description: "Настройка Визуального Редактора."
+  rich_editor_engine: "Реализация Визуального Редактора"
+  rich_editor_ids: "Идентификаторы"
+  rich_editor_ids_description: "Перечислите идентификаторы элементов textarea через пробел"

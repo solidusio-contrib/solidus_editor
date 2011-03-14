@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
   $(function() {
-      var ids = [<%= ids.map{|id| "'##{id}'"}.join(', ') %>]
+      var ids = [<%= ids.map{|id| "'textarea##{id}'"}.join(', ') %>]
       $(ids.join(', ')).wymeditor();
   });
 </script>

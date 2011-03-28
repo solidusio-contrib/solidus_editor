@@ -1,5 +1,6 @@
 WYMeditor.STRINGS['ru'] = {
     Strong:           'Жирный',
+    Bold:             'Полужирный',
     Emphasis:         'Наклонный',
     Superscript:      'Надстрочный',
     Subscript:        'Подстрочный',
@@ -28,9 +29,10 @@ WYMeditor.STRINGS['ru'] = {
     Title:            'Заголовок',
     Alternative_Text: 'Альтернативный текст',
     Caption:          'Надпись',
-    Summary:          'Summary',
+    Summary:          'Сводка',
     Number_Of_Rows:   'Кол-во строк',
     Number_Of_Cols:   'Кол-во столбцов',
+    Insert:           'Вставка',
     Submit:           'Отправить',
     Cancel:           'Отмена',
     Choose:           'Выбор',
@@ -40,6 +42,6 @@ WYMeditor.STRINGS['ru'] = {
     Containers:       'Контейнеры',
     Classes:          'Классы',
     Status:           'Статус',
-    Source_Code:      'Исходный код'
+    Source_Code:      'Исходный код',
+    Apply_Style:      'Стили'
 };
-

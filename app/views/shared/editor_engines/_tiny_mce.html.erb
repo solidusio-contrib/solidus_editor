@@ -9,6 +9,7 @@
             if ($('textarea#' + id)) {
                 tinyMCE.init({
                     // General options
+                    language : '<%= I18n.locale.to_s.downcase %>',
                     element : id,
                     mode : "textareas",
                     theme : "advanced",

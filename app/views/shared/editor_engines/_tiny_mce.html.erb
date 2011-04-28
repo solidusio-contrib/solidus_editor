@@ -6,7 +6,7 @@
         var myConfig = { dompath: true };
         var ids = [<%= ids.map{|id| "'#{id}'"}.join(', ') %>]
         $.each(ids, function(index, id) {
-            if ($('textarea#' + id)) {
+            if ($('textarea#' + id).length) {
                 tinyMCE.init({
                     mode : "exact",
                     elements : id,

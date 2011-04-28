@@ -30,7 +30,7 @@
         var myConfig = { dompath: true };
         var ids = [<%= ids.map{|id| "'#{id}'"}.join(', ') %>];
         $.each(ids, function(index, id) {
-            if ($('textarea#' + id)) {
+            if ($('textarea#' + id).length) {
                 var state = 'off';
                 var newEditor = window[id + '_editor'] = new YAHOO.widget.Editor(id, {
                     height: '350px',

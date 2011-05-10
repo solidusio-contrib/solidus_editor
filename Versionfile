@@ -1,0 +1,3 @@
+"0.60.x" => { :version => '0.50.0', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665' }
+"0.50.x" => { :version => '0.50.0', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665' }
+"0.40.x" => { :version => '0.50.0', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665' }

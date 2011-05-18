@@ -9,10 +9,12 @@ ru:
     bold: Полужирный
     create_an_ordered_list: Нумерованный список
     create_an_unordered_list: Ненумерованный список
+    edit_html_code: Редактировать HTML код
     enter_file_name: Введите имя файла
     font_name_and_size: Шрифт и размер
     font_color: Цвет шрифта
     font_style: Стиль шрифта
+    footer: Сноска
     header: Заголовок
     hide_more_fields: Скрыть дополнительные поля
     html_link: HTML ссылка

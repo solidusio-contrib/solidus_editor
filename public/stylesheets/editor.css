@@ -43,3 +43,26 @@
 .yui-toolbar-group-undoredo h3, .yui-toolbar-group-insertitem h3, .yui-toolbar-group-indentlist h3 {
     width: auto;
 }
+
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-editcode span.yui-toolbar-icon {
+    background-image: url("/images/html_editor.gif");
+    background-position: 0 1px;
+    left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-editcode-selected span.yui-toolbar-icon {
+    background-image: url("/images/html_editor.gif");
+    background-position: 0 1px;
+    left: 5px;
+}
+
+.editor-hidden {
+    visibility: hidden;
+    top: -9999px;
+    left: -9999px;
+    position: absolute !important;
+}
+textarea {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}

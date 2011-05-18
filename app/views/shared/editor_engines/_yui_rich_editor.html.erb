@@ -25,11 +25,14 @@
 
 <script type="text/javascript">
     $(function() {
+        var Dom = YAHOO.util.Dom,
+  	        Event = YAHOO.util.Event;
         var myConfig = { dompath: true };
         var ids = [<%= ids.map{|id| "'#{id}'"}.join(', ') %>];
         $.each(ids, function(index, id) {
             if ($('textarea#' + id)) {
-                window[id + '_editor'] = new YAHOO.widget.Editor(id, {
+                var state = 'off';
+                var newEditor = window[id + '_editor'] = new YAHOO.widget.Editor(id, {
                     height: '350px',
                     width: 'auto',
                     animate: true,
@@ -113,7 +116,8 @@
                             { group: 'insertitem', label: '<%= t("editor.insert_item") %>',
                                 buttons: [
                                     { type: 'push', label: '<%= t("editor.html_link") %> CTRL + SHIFT + L', value: 'createlink', disabled: true },
-                                    { type: 'push', label: '<%= t("editor.insert_image") %>', value: 'insertimage' }
+                                    { type: 'push', label: '<%= t("editor.insert_image") %>', value: 'insertimage' },
+                                    { type: 'push', label: 'Edit HTML Code', value: 'editcode' }
                                 ]
                             },
                             { type: 'separator' },
@@ -128,7 +132,7 @@
                     }
                 });
 
-                window[id + '_editor'].addListener('editorContentLoaded', function() {
+                newEditor.addListener('editorContentLoaded', function() {
                     $(".yui-toolbar-imageUpload").upload({
                         name: 'content_image[attachment]',
                         action: '/content_images',
@@ -140,7 +144,7 @@
                         },
                         onComplete: function(image_src) {
                             var img_html = "<img src='" + image_src + "'/>";
-                            window[id + '_editor'].execCommand('inserthtml', img_html);
+                            newEditor.execCommand('inserthtml', img_html);
                             $(".editor-mask-container").removeClass("active");
                         }
                     });
@@ -160,12 +164,61 @@
                             $(".editor-mask-container").removeClass("active");
                             var file_name = prompt('<%= t("editor.enter_file_name") %>', file_name_original);
                             var link_html = "<a href='" + file_url + "'/>" + file_name + "</a>";
-                            window[id + '_editor'].execCommand('inserthtml', link_html);
+                            newEditor.execCommand('inserthtml', link_html);
                         }
                     });
                 });
 
-                window[id + '_editor'].render();
+
+                newEditor.on('toolbarLoaded', function() {
+          	        this.toolbar.on('editcodeClick', function() {
+          	            var ta = this.get('element'),
+          	                iframe = this.get('iframe').get('element');
+
+          	            if (state == 'on') {
+          	                state = 'off';
+          	                this.toolbar.set('disabled', false);
+          	                this.setEditorHTML(ta.value);
+          	                if (!this.browser.ie) {
+          	                    this._setDesignMode('on');
+          	                }
+
+          	                Dom.removeClass(iframe, 'editor-hidden');
+          	                Dom.addClass(ta, 'editor-hidden');
+          	                this.show();
+          	                this._focusWindow();
+          	            } else {
+          	                state = 'on';
+          	                this.cleanHTML();
+          	                Dom.addClass(iframe, 'editor-hidden');
+          	                Dom.removeClass(ta, 'editor-hidden');
+          	                this.toolbar.set('disabled', true);
+          	                this.toolbar.getButtonByValue('editcode').set('disabled', false);
+          	                this.toolbar.selectButton('editcode');
+          	                this.dompath.innerHTML = 'Editing HTML Code';
+          	                this.hide();
+          	            }
+          	            return false;
+          	        }, this, true);
+
+          	        this.on('cleanHTML', function(ev) {
+          	            this.get('element').value = ev.html;
+          	        }, this, true);
+
+          	        this.on('afterRender', function() {
+          	            var wrapper = this.get('editor_wrapper');
+          	            wrapper.appendChild(this.get('element'));
+          	            this.setStyle('width', '100%');
+          	            this.setStyle('height', '100%');
+          	            this.setStyle('visibility', '');
+          	            this.setStyle('top', '');
+          	            this.setStyle('left', '');
+          	            this.setStyle('position', '');
+
+          	            this.addClass('editor-hidden');
+          	        }, this, true);
+                }, newEditor, true);
+                newEditor.render();
             }
         });
     });

@@ -1,0 +1,45 @@
+es:
+  editor:
+    align_center: Centrado
+    align_left: Alineación izquierda
+    align_right: Alineación derecha
+    alignment: Alineación
+    background_color: Color de fondo
+    bold: Negrita
+    create_an_ordered_list: Crear lista ordenada
+    create_an_unordered_list: Crear lista desordenada
+    enter_file_name: Nombre del archivo
+    font_name_and_size: Nombre y tamaño de la fuente
+    font_color: Color de la fuente
+    font_style: Estilo de  la fuente
+    footer: Pie
+    header: Cabecera
+    hide_more_fields: Ocultar más campos
+    html_link: Enlace HTML
+    indenting_and_lists: "Tabulaciones y listas"
+    insert_item: Insertar elemento
+    insert_image: Insertar imagen
+    indent: Tabular hacia dentro
+    italic: Cursiva
+    justify: Justificar
+    loading: Cargando
+    normal: Normal
+    outdent: Tabular hacia fuera
+    paragraph_style: Estilo de párrafo
+    remove_formatting: Eliminar formato
+    show_hide_hidden_elements: "Mostrar/ocultar elementos ocultos"
+    show_more_fields: Mostrar más campos
+    sidebar: Barra lateral
+    subscript: Subíndice
+    superscript: Superíndice
+    underline: Subrayar
+    upload: Subir
+    upload_image: Subir imagen
+    upload_file: Subir fichero
+
+  enable_rich_editor: "Activar editor avanzado"
+  rich_editor: "Editor avanzado"
+  rich_editor_description: "Configurar opciones del editor."
+  rich_editor_engine: "Motor del editor avanzado"
+  rich_editor_ids: "Identificadores del editor avanzado"
+  rich_editor_ids_description: "Listar aquí los ids de los textareas, separados por espacios"

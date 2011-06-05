@@ -3,6 +3,6 @@
 <script type="text/javascript">
   $(function() {
       var ids = [<%= ids.map{|id| "'textarea##{id}'"}.join(', ') %>]
-      $(ids.join(', ')).wymeditor({ lang: '<%= I18n.locale.to_s.downcase %>', skin: 'compact' });
+      $(ids.join(', ')).wymeditor({ lang: '<%= I18n.locale.to_s.split('-')[0].downcase %>', skin: 'compact' });
   });
 </script>

@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_editor'
-  s.version     = '0.50.0'
+  s.version     = '0.50.1'
   s.summary     = 'Adds support of several WYSIWYG editors to Spree'
   s.description = 'Atm supported: YUIRichEditor, WYMEditor, TinyMCE'
   s.required_ruby_version = '>= 1.8.7'
 
   s.authors           = ['Alexander Shuhin', 'Roman Smirnov', 'divineforest']
   # s.email             = 'david@loudthinking.com'
-  s.homepage          = 'http://github.com/romul/spree_editor'
+  s.homepage          = 'http://github.com/spree/spree_editor'
   # s.rubyforge_project = 'actionmailer'
 
   s.files         = `git ls-files`.split("\n")

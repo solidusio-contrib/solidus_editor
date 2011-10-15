@@ -11,7 +11,7 @@
                     mode : "exact",
                     elements : id,
                     theme : "advanced",
-                    language : '<%= I18n.locale.to_s.downcase %>',
+                    language : '<%= I18n.locale.to_s.split('-')[0].downcase %>',
                     skin : "o2k7",
                     plugins : "safari,style,layer,table,advhr,advimage,inlinepopups,insertdatetime,preview,media,searchreplace,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
 

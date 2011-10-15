@@ -30,10 +30,10 @@
 	display: block !important;
 }
 .yui-toolbar-imageUpload .first-child {
-	background: url("/images/upload_image.png") no-repeat scroll 50% 50% transparent !important;
+	background: url("/assets/admin/upload_image.png") no-repeat scroll 50% 50% transparent !important;
 }
 .yui-toolbar-fileUpload .first-child {
-	background: url("/images/upload_file.png") no-repeat scroll 50% 50% transparent !important;
+	background: url("/assets/admin/upload_file.png") no-repeat scroll 50% 50% transparent !important;
 }
 
 .yui-skin-sam .yui-toolbar-container .yui-toolbar-heading {
@@ -45,12 +45,12 @@
 }
 
 .yui-skin-sam .yui-toolbar-container .yui-toolbar-editcode span.yui-toolbar-icon {
-    background-image: url("/images/html_editor.gif");
+    background-image: url("/assets/admin/html_editor.gif");
     background-position: 0 1px;
     left: 5px;
 }
 .yui-skin-sam .yui-toolbar-container .yui-button-editcode-selected span.yui-toolbar-icon {
-    background-image: url("/images/html_editor.gif");
+    background-image: url("/assets/admin/html_editor.gif");
     background-position: 0 1px;
     left: 5px;
 }

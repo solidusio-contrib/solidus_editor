@@ -1,5 +1,5 @@
-<script type="text/javascript" src="/javascripts/tinymce/tiny_mce.js"></script>
-<script type="text/javascript" src="/javascripts/tinymce/jquery.tinymce.js"></script>
+<%= javascript_include_tag 'admin/tinymce/tiny_mce.js' %>
+<%= javascript_include_tag 'admin/tinymce/jquery.tinymce.js' %>
 
 <script type="text/javascript">
     $(function() {
@@ -26,13 +26,13 @@
                     theme_advanced_resizing : true,
 
                     // Example content CSS (should be your site CSS)
-                    content_css : "css/example.css",
+                    content_css : "/stylesheets/page-content.css",
 
                     // Drop lists for link/image/media/template dialogs
-                    template_external_list_url : "js/template_list.js",
-                    external_link_list_url : "js/link_list.js",
-                    external_image_list_url : "js/image_list.js",
-                    media_external_list_url : "js/media_list.js",
+                    template_external_list_url : "/javascripts/tinymce-template_list.js",
+                    external_link_list_url : "/javascripts/tinymce-link_list.js",
+                    external_image_list_url : "/javascripts/tinymce-/image_list.js",
+                    media_external_list_url : "/javascripts/tinymce-media_list.js",
                 });
             }
         });

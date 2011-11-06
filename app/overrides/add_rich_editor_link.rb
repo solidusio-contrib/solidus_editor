@@ -4,4 +4,4 @@ Deface::Override.new(:virtual_path => "admin/configurations/index",
                      :text => "<tr>
       <td><%= link_to t(\"rich_editor\"), admin_editor_settings_path %></td>
       <td><%= t(\"rich_editor_description\") %></td>
-      </ tr>")
+      </tr>")

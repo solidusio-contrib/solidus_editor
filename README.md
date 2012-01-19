@@ -11,15 +11,15 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 
 # Installation #
 
-# Add the Spree Editor gem to your Gemfile:
+1. Add the Spree Editor gem to your Gemfile:
 
     gem 'spree_editor', :git => 'git://raw.github.com/spree/spree_editor.git'
 
-# Install the gem:
+2. Install the gem:
 
     bundle install
 
-# Install the assets:
+3. Install the assets:
 
     rails g spree_editor:install
 

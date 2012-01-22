@@ -1,0 +1,20 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t("rich_editor") %></h1>
+
+<table>
+  <tr>
+    <td><%= t('enable_rich_editor') %>:</td>
+    <td><%= @config[:enabled] ? t('yes') : t('no') %></td>
+  </tr>
+  <tr>
+    <td><%= t('rich_editor_engine') %>:</td>
+    <td><%= @config[:current_editor] %></td>
+  </tr>
+  <tr>
+    <td><%= t('rich_editor_ids') %>:</td>
+    <td><%= @config[:ids] %></td>
+  </tr>
+</table>
+
+<p><%= link_to_with_icon 'edit', t("edit"), edit_admin_editor_settings_path %></p>

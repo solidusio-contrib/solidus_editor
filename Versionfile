@@ -1,4 +1,5 @@
-"0.70.x" => { :branch => "master" }
+"1.0.x" => { :branch => "master" }
+"0.70.x" => { :version => "0.70.0", :ref => '697cd05c73ce6aabe5556ffc9f229c55f4b83b7d' }
 "0.60.x" => { :version => '0.50.0', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665' }
 "0.50.x" => { :version => '0.50.0', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665' }
 "0.40.x" => { :version => '0.50.0', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665' }

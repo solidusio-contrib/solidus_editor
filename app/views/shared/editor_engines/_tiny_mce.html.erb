@@ -1,8 +1,6 @@
-
 <script type="text/javascript">
   $(function() {
     var myConfig = { dompath: true };
-    var ids = [<%= ids.map{|id| "'textarea##{id}'"}.join(', ') %>];
     tinyMCE.init(<%= raw TinyMCE::Rails.configuration.options.merge({ :elements => ids.join(',') }).to_json %>);
   });
 </script>

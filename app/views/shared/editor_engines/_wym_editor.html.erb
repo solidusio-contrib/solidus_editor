@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
   $(function() {
-      var ids = [<%= ids.map{|id| "'textarea##{id}'"}.join(', ') %>]
+      var ids = [<%= raw ids.map{|id| "'textarea##{id}'"}.join(', ') %>]
       $(ids.join(', ')).wymeditor({
         lang: '<%= I18n.locale.to_s.downcase %>',
         skin: 'compact',

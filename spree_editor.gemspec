@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('tinymce-rails', '>= 3.4.7.0.1')
   s.add_dependency('spree_core', '>= 2.0.0.beta')
+  s.add_dependency('ckeditor')
 
   s.add_development_dependency 'rspec-rails'
 end

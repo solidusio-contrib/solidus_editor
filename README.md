@@ -13,7 +13,7 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 
 1. Add the Spree Editor gem to your Gemfile:
 
-    `gem 'spree_editor', :github => "spree/spree_editor"
+    `gem 'spree_editor', :github => "spree/spree_editor"`
     
     `gem 'tinymce-rails', '>= 3.4.7.0.1'`
 

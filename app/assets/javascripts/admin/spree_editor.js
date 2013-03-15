@@ -5,5 +5,5 @@
 // the compiled file.
 //
 //= require_tree .
-//= require admin/spree_core
+//= require admin/spree_backend
 //= require tinymce-jquery

@@ -10,3 +10,6 @@ nbproject
 *.gem
 Gemfile.lock
 .rvmrc
+.sass-cache
+coverage
+spec/dummy

@@ -25,6 +25,18 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 
     `rails g spree_editor:install`
 
+# Configuration
+
+Preferences can be updated within the admin panel under "configuration" then "rich editor".
+
+Or you may set them with an initializer within your application:
+
+```ruby
+SpreeEditor::Config.tap do |config|
+  config.ids = "product_description page_body event_body"
+end
+```
+
 # Language-Support #
 To obtain support for multiple languages with TinyMCE add tinymce-rails-langs to your Gemfile:
 

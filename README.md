@@ -15,31 +15,19 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 gem 'spree_editor', :github => 'spree/spree_editor'
 ```
 
-2. Select CKEditor or TinyMCE to use for an editor, and add the appropriate gem to your Gemfile:
-
-```ruby
-gem 'ckeditor'
-```
-
-or
-
-```ruby
-gem 'tinymce-rails', '>= 3.4.7.0.1'`
-```
-
-3. Install the gems:
+2. Install the gems:
 
 ```shell
 bundle install
 ```
 
-4. Install the assets:
+3. Install the assets:
 
 ```shell
 rails g spree_editor:install
 ```
 
-5. If using CKEditor, and would like to enable file uploads run the ckeditor generator:
+4. If using CKEditor, and would like to enable file uploads run the ckeditor generator:
 
 ```shell
 rails generate ckeditor:install --orm=active_record --backend=paperclip

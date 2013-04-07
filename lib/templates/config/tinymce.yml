@@ -1,7 +1,7 @@
 # Spree Editor TinyMCE Configuration
 #
 # These are the options that will automatically be passed into the tinyMCE.init function
-# whenever TinyMCE is loaded in one of your spring pages. Please edit this file to
+# whenever TinyMCE is loaded in one of your spree pages. Please edit this file to
 # customise your TinyMCE setup in your spree installation. If you wish to see the full
 # range of configuration options then please go here:
 #

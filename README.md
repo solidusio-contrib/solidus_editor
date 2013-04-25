@@ -61,4 +61,4 @@ bundle exec rspec spec
 
 * Improved i18n support.
 
-Copyright (c) 2010-2013 [divineforest], released under the New BSD License
+Copyright (c) 2010-2013 [divineforest](https://github.com/divineforest), released under the New BSD License

@@ -1,47 +1,48 @@
 ---
 en:
-  editor:
-    align_center: Align Center
-    align_left: Align Left
-    align_right: Align Right
-    alignment: Alignment
-    background_color: Background Color
-    bold: Bold
-    create_an_ordered_list: Create an Ordered List
-    create_an_unordered_list: Create an Unordered List
-    edit_html_code: Edit HTML code
-    enter_file_name: Enter file name
-    font_name_and_size: Font Name and Size
-    font_color: Font Color
-    font_style: Font Style
-    footer: Footer
-    header: Header
-    hide_more_fields: Hide more fields
-    html_link: HTML Link
-    indenting_and_lists: "Indenting/Lists"
-    insert_item: Insert Item
-    insert_image: Insert Image
-    indent: Indent
-    italic: Italic
-    justify: Justify
-    loading: Loading
-    normal: Normal
-    outdent: Outdent
-    paragraph_style: Paragraph Style
-    remove_formatting: Remove Formatting
-    show_hide_hidden_elements: "Show/Hide Hidden Elements"
-    show_more_fields: Show more fields
-    sidebar: Sidebar
-    subscript: Subscript
-    superscript: Superscript
-    underline: Underline
-    upload: Upload
-    upload_image: Upload Image
-    upload_file: Upload File
-    
-  enable_rich_editor: "Enable Rich Editor"
-  rich_editor: "Rich Editor"
-  rich_editor_description: "Configure Rich Editor settings."
-  rich_editor_engine: "Rich Editor engine"
-  rich_editor_ids: "Rich Editor Identificators"
-  rich_editor_ids_description: "List textarea's ids splitted by spaces here"
+    spree:
+      editor:
+        align_center: Align Center
+        align_left: Align Left
+        align_right: Align Right
+        alignment: Alignment
+        background_color: Background Color
+        bold: Bold
+        create_an_ordered_list: Create an Ordered List
+        create_an_unordered_list: Create an Unordered List
+        edit_html_code: Edit HTML code
+        enter_file_name: Enter file name
+        font_name_and_size: Font Name and Size
+        font_color: Font Color
+        font_style: Font Style
+        footer: Footer
+        header: Header
+        hide_more_fields: Hide more fields
+        html_link: HTML Link
+        indenting_and_lists: "Indenting/Lists"
+        insert_item: Insert Item
+        insert_image: Insert Image
+        indent: Indent
+        italic: Italic
+        justify: Justify
+        loading: Loading
+        normal: Normal
+        outdent: Outdent
+        paragraph_style: Paragraph Style
+        remove_formatting: Remove Formatting
+        show_hide_hidden_elements: "Show/Hide Hidden Elements"
+        show_more_fields: Show more fields
+        sidebar: Sidebar
+        subscript: Subscript
+        superscript: Superscript
+        underline: Underline
+        upload: Upload
+        upload_image: Upload Image
+        upload_file: Upload File
+        
+      enable_rich_editor: "Enable Rich Editor"
+      rich_editor: "Rich Editor"
+      rich_editor_description: "Configure Rich Editor settings."
+      rich_editor_engine: "Rich Editor engine"
+      rich_editor_ids: "Rich Editor Identificators"
+      rich_editor_ids_description: "List textarea's ids splitted by spaces here"

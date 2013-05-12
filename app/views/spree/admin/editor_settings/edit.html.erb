@@ -6,7 +6,7 @@
   <fieldset id="preferences">
     <%= form.field_container :current_editor do %>
       <%= form.label(:current_editor, Spree.t('rich_editor_engine')) %>
-      <%= select_tag :current_editor, options_for_selecSpree.t(SpreeEditor::EditorEngines, @config[:current_editor])  %>
+      <%= select_tag :current_editor, options_for_select(SpreeEditor::EditorEngines, @config[:current_editor])  %>
     <% end %>
     <%= form.field_container :enabled do %>
       <%= preference_field_tag(:enabled,   @config[:enabled], :type => :boolean) %>

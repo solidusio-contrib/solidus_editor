@@ -27,6 +27,12 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 
     `rails generate ckeditor:install --orm=active_record --backend=paperclip && rake db:migrate`
 
+5. In order to secure your file uploads to only be accessed by admins you will also need to configure `config/initializers/ckeditor.rb`:
+
+```ruby
+config.authorize_with :cancan, Spree::Ability
+```
+
 ## Configuration
 
 Preferences can be updated within the admin panel under "configuration" then "rich editor".

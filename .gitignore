@@ -2,14 +2,11 @@
 *~
 .#*
 .DS_Store
-.idea
-.project
 tmp
-nbproject
-*.swp
 *.gem
 Gemfile.lock
 .rvmrc
 .sass-cache
 coverage
 spec/dummy
+.localeapp

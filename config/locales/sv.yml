@@ -1,0 +1,48 @@
+---
+sv:
+  spree:
+    editor:
+      align_center: Centrerad
+      align_left: Vänster
+      align_right: Höger
+      alignment: Justering
+      background_color: Bakgrundsfärg
+      bold: Fet
+      create_an_ordered_list: Skapa en ordnad lista
+      create_an_unordered_list: Skapa en lista
+      edit_html_code: Redigera HTML-kod
+      enter_file_name: Ange filnamnet
+      font_name_and_size: Teckensnitt och storlek
+      font_color: Teckenfärg
+      font_style: Teckenstil
+      footer: Sidfot
+      header: Rubrik
+      hide_more_fields: Dölj fler fält
+      html_link: HTML länk
+      indenting_and_lists: "Indrag/Listor"
+      insert_item: Infoga objekt
+      insert_image: Infoga bild
+      indent: Indrag
+      italic: Kursiv
+      justify: Marginaljustera
+      loading: Laddar
+      normal: Normal
+      outdent: Minska indrag
+      paragraph_style: Paragraf stil
+      remove_formatting: Ta bort formatering
+      show_hide_hidden_elements: "Visa/dölj dolda element"
+      show_more_fields: Visa fler fält
+      sidebar: Sidomeny
+      subscript: Nedsänkta tecken
+      superscript: Upphöjda tecken
+      underline: Understruken
+      upload: Ladda upp
+      upload_image: Ladda upp bild
+      upload_file: Ladda upp fil
+
+    enable_rich_editor: Aktivera Texthanterare
+    rich_editor: Texthanterare
+    rich_editor_description: Konfigurera Texthanterare inställningar.
+    rich_editor_engine: Texthanterare motor
+    rich_editor_ids: Texthanterare identifierare
+    rich_editor_ids_description: "Lista textareans ids delade med blanksteg här"

@@ -1,24 +1,45 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+<%= render 'spree/admin/shared/configuration_menu' %>
 
-<h1><%= Spree.t('rich_editor') %></h1>
+<% content_for :page_title do %>
+  <%= Spree.t(:rich_editor) %>
+<% end %>
 
-<%= form_for(@config, :as => "editor_configuration", :url => spree.admin_editor_settings_path, :method => :put) do |form| %>
-  <fieldset id="preferences">
-    <%= form.field_container :current_editor do %>
-      <%= form.label(:current_editor, Spree.t('rich_editor_engine')) %>
-      <%= select_tag :current_editor, options_for_select(SpreeEditor::EditorEngines, @config[:current_editor])  %>
-    <% end %>
-    <%= form.field_container :enabled do %>
-      <%= preference_field_tag(:enabled,   @config[:enabled], :type => :boolean) %>
-      <%= form.label(:enabled, Spree.t(:enable_rich_editor)) %>
-    <% end %>
-    <%= form.field_container :ids do %>
-      <%= form.label(:ids, Spree.t(:rich_editor_ids_description)+": ") + tag(:br) %>
-      <%= preference_field_tag(:ids,  @config[:ids], :type => :text) %>
-    <% end %>
+<%#= render 'spree/shared/error_messages', target: settings %>
+
+<%= form_tag admin_editor_settings_path, method: :put do %>
+
+  <fieldset class="no-border-top">
+
+    <div data-hook="admin_editor_method_form_fields">
+
+      <div class="row">
+        <div class="alpha twelve columns" data-hook="editor_preferences">
+          <fieldset class="no-border-bottom">
+            <legend align="center"><%= Spree.t(:rich_editor) %></legend>
+
+              <div class="field">
+                <%= label_tag(:current_editor, Spree.t(:rich_editor_engine)) + tag(:br) %>
+                <%= select_tag(:current_editor, options_for_select(Spree::EditorConfiguration.editors, SpreeEditor::Config[:current_editor]), { class: 'fullwidth' }) %>
+              </div>
+              <div class="field">
+                <%= preference_field_tag(:enabled, SpreeEditor::Config[:enabled], type: :boolean) %>
+                <%= label_tag(:enabled, Spree.t(:enable_rich_editor)) %>
+              </div>
+              <div class="field">
+                <%= label_tag(:ids, Spree.t(:rich_editor_ids_description)) + tag(:br) %>
+                <%= preference_field_tag(:ids, SpreeEditor::Config[:ids], class: 'fullwidth') %>
+              </div>
+
+          </fieldset>
+        </div>
+      </div>
+
+    </div>
+
   </fieldset>
-  <p class="form-buttons">
-    <%= button Spree.t('update') %>
-    <%= Spree.t("or") %> <%= link_to Spree.t("cancel"), spree.admin_editor_settings_url %>
-  </p>
+
+  <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <%= button Spree.t('actions.update'), 'icon-refresh' %>
+  </div>
+
 <% end %>

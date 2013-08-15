@@ -9,13 +9,13 @@ feature 'Rich Editor Settings', js: true do
 
   context 'visiting editor settings' do
     scenario 'should have the right content' do
-      visit spree.admin_editor_settings_path
+      visit spree.admin_path
+      click_link 'Configuration'
+      click_link 'Rich Editor'
       within('h1') do
         page.should have_content 'Rich Editor'
       end
-      within('table') do
-        page.should have_content 'product_description page_body'
-      end
+      page.should have_field 'ids', with: 'product_description page_body'
     end
   end
 
@@ -34,7 +34,7 @@ feature 'Rich Editor Settings', js: true do
 
       click_link 'Configuration'
       click_link 'Rich Editor'
-      click_icon 'edit'
+
       select 'TinyMCE', from: 'current_editor'
 
       click_button 'Update'

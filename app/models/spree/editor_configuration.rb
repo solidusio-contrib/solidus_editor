@@ -1,7 +1,11 @@
-class Spree::EditorConfiguration < Spree::Preferences::Configuration
+module Spree
+  class EditorConfiguration < Preferences::Configuration
+    preference :enabled,        :boolean, default: true
+    preference :current_editor, :string,  default: 'TinyMCE'
+    preference :ids,            :string,  default: 'product_description page_body'
 
-  preference :enabled, :boolean, :default => true
-  preference :current_editor, :string, :default => 'TinyMCE'
-  preference :ids, :text, :default => 'product_description page_body'
-
+    def self.editors
+      %w(TinyMCE CKEditor)
+    end
+  end
 end

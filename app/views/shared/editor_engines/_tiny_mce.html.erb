@@ -1,6 +1,6 @@
 <%= javascript_include_tag('tinymce') %>
 
-<script type="text/javascript">
+<script>
   $(function() {
     var myConfig = { dompath: true };
     tinyMCE.init(<%= raw TinyMCE::Rails.configuration.options.merge({ :elements => ids.join(',') }).to_json %>);

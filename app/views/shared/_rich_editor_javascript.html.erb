@@ -4,5 +4,7 @@
 <% ids = @editor_configuration[:ids].split %>
 
 <% if is_enabled and ids.any? %>
-  <%= render "shared/editor_engines/#{@editor_configuration[:current_editor].underscore}", ids: ids %>
+  <%# content_for :head do %>
+    <%= render "shared/editor_engines/#{@editor_configuration[:current_editor].underscore}", ids: ids %>
+  <%# end %>
 <% end %>

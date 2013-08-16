@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'ckeditor', '~> 4.0.4'
   s.add_runtime_dependency 'spree_backend', '~> 2.0.0'
-  s.add_runtime_dependency 'tinymce-rails', '~> 3.5.8.3'
+  s.add_runtime_dependency 'tinymce-rails', '~> 4.0.2'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails', '~> 3.2.2'

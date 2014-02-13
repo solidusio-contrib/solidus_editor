@@ -39,7 +39,6 @@ feature 'Rich Editor Settings', js: true do
 
       click_button 'Update'
       visit spree.edit_admin_product_path(product)
-      print page.html
       page.should have_css '.mce-tinymce', match: :one
     end
   end

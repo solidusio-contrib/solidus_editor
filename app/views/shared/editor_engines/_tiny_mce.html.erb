@@ -1,8 +1,24 @@
-<%= javascript_include_tag('tinymce') %>
+<%= javascript_include_tag 'tinymce-jquery' %>
 
-<script type="text/javascript">
-  $(function() {
-    var myConfig = { dompath: true };
-    tinyMCE.init(<%= raw TinyMCE::Rails.configuration.options.merge({ :elements => ids.join(',') }).to_json %>);
+<script>
+  $(function () {
+    /* Inject each textarea id with .tinymce class required for TinyMCE 4 */
+    $('<%= raw ids.each.map{|id| "textarea##{id}" }.join(", ") %>').addClass('tinymce');
+  });
+
+  $(document).ready(function () {
+    $('<%= raw ids.each.map{|id| "textarea##{id}" }.join(", ") %>').tinymce(
+      <%= raw TinyMCE::Rails.configuration.options.to_json %>);
   });
 </script>
+
+<style type="text/css">
+  /* Reset TinyMCE menu styles */
+  .mce-tinymce button {
+    font-size: inherit !important;
+    text-transform: inherit !important;
+  }
+  .mce-tinymce button:hover {
+    background-color: inherit !important;
+  }
+</style>

@@ -9,4 +9,3 @@ Gemfile.lock
 .sass-cache
 coverage
 spec/dummy
-.localeapp

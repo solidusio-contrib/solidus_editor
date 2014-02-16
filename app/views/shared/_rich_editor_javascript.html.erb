@@ -1,10 +1,8 @@
-<% @editor_configuration = Spree::EditorConfiguration.new %>
-<% is_enabled = @editor_configuration[:enabled] %>
-<% current_editor = @editor_configuration[:current_editor] %>
-<% ids = @editor_configuration[:ids].split %>
+<% @editor_setting = Spree::EditorSetting.new %>
+<% is_enabled = @editor_setting[:enabled] %>
+<% current_editor = @editor_setting[:current_editor] %>
+<% ids = @editor_setting[:ids].split %>
 
 <% if is_enabled and ids.any? %>
-  <%# content_for :head do %>
-    <%= render "shared/editor_engines/#{@editor_configuration[:current_editor].underscore}", ids: ids %>
-  <%# end %>
+  <%= render "shared/editor_engines/#{@editor_setting[:current_editor].underscore}", ids: ids %>
 <% end %>

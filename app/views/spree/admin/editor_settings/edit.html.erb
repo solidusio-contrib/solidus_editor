@@ -4,38 +4,30 @@
   <%= Spree.t(:rich_editor) %>
 <% end %>
 
-<%#= render 'spree/shared/error_messages', target: settings %>
-
 <%= form_tag admin_editor_settings_path, method: :put do %>
 
   <fieldset class="no-border-top">
-
     <div data-hook="admin_editor_method_form_fields">
-
       <div class="row">
         <div class="alpha twelve columns" data-hook="editor_preferences">
           <fieldset class="no-border-bottom">
             <legend align="center"><%= Spree.t(:rich_editor) %></legend>
-
-              <div class="field">
-                <%= label_tag(:current_editor, Spree.t(:rich_editor_engine)) + tag(:br) %>
-                <%= select_tag(:current_editor, options_for_select(Spree::EditorConfiguration.editors, SpreeEditor::Config[:current_editor]), { class: 'fullwidth' }) %>
-              </div>
-              <div class="field">
-                <%= preference_field_tag(:enabled, SpreeEditor::Config[:enabled], type: :boolean) %>
-                <%= label_tag(:enabled, Spree.t(:enable_rich_editor)) %>
-              </div>
-              <div class="field">
-                <%= label_tag(:ids, Spree.t(:rich_editor_ids_description)) + tag(:br) %>
-                <%= preference_field_tag(:ids, SpreeEditor::Config[:ids], class: 'fullwidth') %>
-              </div>
-
+            <div class="field">
+              <%= label_tag(:current_editor, Spree.t(:rich_editor_engine)) + tag(:br) %>
+              <%= select_tag(:current_editor, options_for_select(Spree::EditorSetting.editors, SpreeEditor::Config[:current_editor]), { class: 'fullwidth select2' }) %>
+            </div>
+            <div class="field">
+              <%= preference_field_tag(:enabled, SpreeEditor::Config[:enabled], type: :boolean) %>
+              <%= label_tag(:enabled, Spree.t(:enable_rich_editor)) %>
+            </div>
+            <div class="field">
+              <%= label_tag(:ids, Spree.t(:rich_editor_ids_description)) + tag(:br) %>
+              <%= preference_field_tag(:ids, SpreeEditor::Config[:ids], class: 'fullwidth') %>
+            </div>
           </fieldset>
         </div>
       </div>
-
     </div>
-
   </fieldset>
 
   <div class="form-buttons filter-actions actions" data-hook="buttons">

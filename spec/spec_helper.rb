@@ -1,21 +1,5 @@
-if ENV['COVERAGE']
-  require 'simplecov'
-  require 'coveralls'
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    SimpleCov::Formatter::HTMLFormatter,
-    Coveralls::SimpleCov::Formatter
-  ]
-  SimpleCov.start do
-    add_filter '/config/'
-    add_filter '/spec/'
-    add_group 'Controllers', 'app/controllers'
-    add_group 'Helpers', 'app/helpers'
-    add_group 'Mailers', 'app/mailers'
-    add_group 'Models', 'app/models'
-    add_group 'Overrides', 'app/overrides'
-    add_group 'Libraries', 'lib'
-  end
-end
+require 'simplecov'
+SimpleCov.start 'rails'
 
 ENV['RAILS_ENV'] = 'test'
 
@@ -24,7 +8,8 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'i18n-spec'
 require 'capybara/rspec'
-require 'shoulda-matchers'
+require 'capybara/rails'
+require 'capybara/poltergeist'
 require 'database_cleaner'
 require 'ffaker'
 
@@ -41,7 +26,13 @@ RSpec.configure do |config|
   config.include Spree::TestingSupport::ControllerRequests
   config.include Spree::TestingSupport::UrlHelpers
 
+  config.mock_with :rspec
   config.use_transactional_fixtures = false
+
+  config.before :suite do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with :truncation
+  end
 
   config.before do
     DatabaseCleaner.strategy = example.metadata[:js] ? :truncation : :transaction
@@ -51,4 +42,6 @@ RSpec.configure do |config|
   config.after do
     DatabaseCleaner.clean
   end
+
+  Capybara.javascript_driver = :poltergeist
 end

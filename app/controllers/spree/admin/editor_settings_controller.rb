@@ -1,8 +1,8 @@
 module Spree
   module Admin
-    class EditorSettingsController < BaseController
+    class EditorSettingsController < ResourceController
       def update
-        config = Spree::EditorConfiguration.new
+        config = Spree::EditorSetting.new
         params.each do |name, value|
           next unless config.has_preference? name
           config[name] = value

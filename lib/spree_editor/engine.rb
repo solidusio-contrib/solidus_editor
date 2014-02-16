@@ -3,12 +3,8 @@ module SpreeEditor
     isolate_namespace Spree
     engine_name 'spree_editor'
 
-    config.generators do |g|
-      g.test_framework :rspec
-    end
-
     initializer 'spree_editor.preferences', before: :load_config_initializers do |app|
-      SpreeEditor::Config = Spree::EditorConfiguration.new
+      SpreeEditor::Config = Spree::EditorSetting.new
 
       if Spree::Config.has_preference? :show_raw_product_description
         Spree::Config[:show_raw_product_description] = SpreeEditor::Config[:enabled]

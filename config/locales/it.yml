@@ -1,0 +1,9 @@
+---
+it:
+  spree:
+    enable_rich_editor: Abilita Editor di Testo
+    rich_editor: Editor di Testo
+    rich_editor_description: Configura Editor di Testo.
+    rich_editor_engine: Motore dell'Editor di Testo
+    rich_editor_ids: ID per l'Editor di Testo
+    rich_editor_ids_description: Elenca qui gli ID delle textarea divisi da spazi

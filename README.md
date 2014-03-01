@@ -1,6 +1,7 @@
 # Spree Editor
 
 [![Build Status](https://api.travis-ci.org/spree/spree_editor.png?branch=master)](https://travis-ci.org/spree/spree_editor)
+[![Code Climate](https://codeclimate.com/github/spree/spree_editor.png)](https://codeclimate.com/github/spree/spree_editor)
 
 This extension provides an inline rich-text editor for Spree. It implements different types of editors:
 

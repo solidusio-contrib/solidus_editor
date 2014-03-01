@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'ckeditor'
-  s.add_dependency 'spree_backend', '~> 2.2.0.beta'
+  s.add_dependency 'spree_backend', '~> 2.2.0'
   s.add_dependency 'tinymce-rails', '~> 4.0.16'
 
   s.add_development_dependency 'rspec'
@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sass-rails', '~> 4.0.0'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'poltergeist', '~> 1.5.0'
-  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'simplecov', '~> 0.7.1'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails', '~> 2.14.0'
 end

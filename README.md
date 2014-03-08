@@ -11,25 +11,25 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 ## Installation
 
 1. Add the Spree Editor gem to your `Gemfile`:
-```ruby
-gem 'spree_editor', github: 'spree/spree_editor'
-```
+  ```ruby
+  gem 'spree_editor', github: 'spree/spree_editor'
+  ```
 
 2. Run:
-```sh
-$ bundle install
-$ rails g spree_editor:install
-```
+  ```sh
+  $ bundle install
+  $ rails g spree_editor:install
+  ```
 
 3. If using CKEditor, and would like to enable file uploads run the ckeditor generator:
-```sh
-$ rails g ckeditor:install --orm=active_record --backend=paperclip && rake db:migrate`
-```
+  ```sh
+  $ rails g ckeditor:install --orm=active_record --backend=paperclip && rake db:migrate
+  ```
 
 4. In order to secure your file uploads to only be accessed by admins you will also need to configure config/initializers/ckeditor.rb:
-```ruby
-config.authorize_with :cancan, Spree::Ability
-```
+  ```ruby
+  config.authorize_with :cancan, Spree::Ability
+  ```
 
 ## Configuration
 

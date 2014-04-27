@@ -1,0 +1,9 @@
+---
+nl:
+  spree:
+    enable_rich_editor: "HTML Editor inschakelen"
+    rich_editor: "HTML Editor"
+    rich_editor_description: "Configureer HTML Editor."
+    rich_editor_engine: "HTML Editor implementatie"
+    rich_editor_ids: "HTML Editor id's"
+    rich_editor_ids_description: "HTML Editor koppelen aan de volgende id's (gescheiden door spaties)"

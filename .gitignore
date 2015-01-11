@@ -9,3 +9,5 @@ Gemfile.lock
 .sass-cache
 coverage
 spec/dummy
+.ruby-version
+.ruby-gemset

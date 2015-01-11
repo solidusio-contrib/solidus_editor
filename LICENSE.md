@@ -1,4 +1,4 @@
-Copyright (c) 2014 divineforest and contributors.
+Copyright (c) 2010-2015 divineforest and contributors.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

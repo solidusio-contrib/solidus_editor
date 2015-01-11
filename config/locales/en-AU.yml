@@ -1,9 +1,0 @@
----
-en-AU:
-  spree:
-    enable_rich_editor: Enable Rich Editor
-    rich_editor: Rich Editor
-    rich_editor_description: Configure Rich Editor settings.
-    rich_editor_engine: Rich Editor engine
-    rich_editor_ids: Rich Editor Identificators
-    rich_editor_ids_description: "List textarea's ids splitted by spaces here"

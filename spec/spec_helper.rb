@@ -15,11 +15,11 @@ require 'i18n-spec'
 require 'ffaker'
 
 RSpec.configure do |config|
-  config.raise_errors_for_deprecations!
   config.infer_spec_type_from_file_location!
+  config.mock_with :rspec
+  config.raise_errors_for_deprecations!
   config.use_transactional_fixtures = false
 
-  config.mock_with :rspec
   config.expect_with :rspec do |expectations|
     expectations.syntax = :expect
   end

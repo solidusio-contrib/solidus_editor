@@ -3,7 +3,8 @@ module Spree
     class EditorSettingsController < ResourceController
       def update
         config = Spree::EditorSetting.new
-        params.each do |name, value|
+        preferences = params && params.key?(:preferences) ? params.delete(:preferences) : params
+        preferences.each do |name, value|
           next unless config.has_preference? name
           config[name] = value
         end
@@ -13,7 +14,7 @@ module Spree
         end
 
         flash[:success] = Spree.t(:successfully_updated, resource: Spree.t(:rich_editor))
-        render :edit
+        redirect_to edit_admin_editor_settings_path
       end
     end
   end

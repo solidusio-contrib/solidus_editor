@@ -1,6 +1,6 @@
 # coding: utf-8
 lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
 require 'spree_editor/version'
 
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.authors       = ['Alexander Shuhin', 'Roman Smirnov', 'divineforest', 'Marc Lee', 'Jeff Dutil']
   s.homepage      = 'https://github.com/spree/spree_editor'
-  s.license       = %q{BSD-3}
+  s.license       = 'BSD-3'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")

@@ -1,9 +1,11 @@
 language: ruby
 rvm:
-  - 2.1.0
+  - 2.1
+  - 2.2
   - ruby-head
 matrix:
   allow_failures:
+    - rvm: 2.2
     - rvm: ruby-head
 sudo: false
 before_script:

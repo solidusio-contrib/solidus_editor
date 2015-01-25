@@ -8,6 +8,7 @@ matrix:
     - rvm: 2.2
     - rvm: ruby-head
 sudo: false
+cache: bundler
 before_script:
   - sh -e /etc/init.d/xvfb start
   - export DISPLAY=:99.0

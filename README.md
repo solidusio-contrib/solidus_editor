@@ -33,6 +33,10 @@ This extension provides an inline rich-text editor for Spree. It implements diff
   config.authorize_with :cancan, Spree::Ability
   ```
 
+5. In order to precompile CKEditor's generated assets, you will need to add a line in config/initializers/assets.rb:
+  ```ruby
+  Rails.application.config.assets.precompile += %w( ckeditor/*)
+  ```
 ---
 
 ## Configuration

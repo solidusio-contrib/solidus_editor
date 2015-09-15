@@ -6,11 +6,10 @@
 
 <script>
   $(function() {
-    var ids = [<%= raw ids.map{|id| "'#{id}'"}.join(', ') %>];
-    for (var key in ids) {
-      if ($('#' + ids[key]).length > 0) {
-        CKEDITOR.replace(ids[key]);
+    <% ids.each do |id| %>
+      if ($("#<%= id %>").length > 0) {
+        CKEDITOR.replace("<%= id %>");
       }
-    }
+    <% end %>
   });
 </script>

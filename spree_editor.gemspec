@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'ckeditor',      '~> 4.1.2'
   s.add_dependency 'spree_backend', '~> 3.1.0.beta'
-  s.add_dependency 'tinymce-rails', '~> 4.0.16'
+  s.add_dependency 'tinymce-rails', '~> 4.2.5'
 
   s.add_development_dependency 'i18n-spec', '>= 0.5.0'
   s.add_development_dependency 'guard-rspec'

@@ -8,6 +8,10 @@ This extension provides an inline rich-text editor for Spree. It implements diff
 - [CKEditor][1]
 - [TinyMCE][2]
 
+Please not that this extension is just a simple integration of some pretty complex gems: [`ckeditor`][9] and [`tinymce-rails`][10].
+
+If you have issues, please check their issues trackers first.
+
 ---
 
 ## Installation
@@ -81,3 +85,5 @@ Copyright (c) 2010-2015 [divineforest][5] and other [contributors][6], released 
 [6]: https://github.com/spree-contrib/spree_editor/graphs/contributors
 [7]: https://github.com/spree-contrib/spree_editor/blob/master/LICENSE.md
 [8]: https://github.com/spree-contrib/spree_editor/blob/master/CONTRIBUTING.md
+[9]: https://github.com/galetahub/ckeditor
+[10]: https://github.com/spohlenz/tinymce-rails

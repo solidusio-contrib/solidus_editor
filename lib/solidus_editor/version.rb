@@ -1,4 +1,4 @@
-module SpreeEditor
+module SolidusEditor
   module_function
 
   # Returns the version of the currently loaded SpreeEditor as a

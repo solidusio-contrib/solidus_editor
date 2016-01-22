@@ -1,37 +1,35 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
 <% content_for :page_title do %>
   <%= Spree.t(:rich_editor) %>
 <% end %>
 
 <%= form_tag admin_editor_settings_path, method: :put do %>
+  <fieldset class="general no-border-top">
 
-  <fieldset>
-    <div data-hook="admin_editor_method_form_fields">
-      <div class="row">
-        <div class="col-md-12" data-hook="editor_preferences">
-          <fieldset>
-            <legend><%= Spree.t(:rich_editor) %></legend>
-            <div class="form-group">
-              <%= label_tag(:current_editor, Spree.t(:rich_editor_engine)) %>
-              <%= select_tag(:current_editor, options_for_select(Spree::EditorSetting.editors, SpreeEditor::Config[:current_editor]), class: 'select2') %>
-            </div>
-            <div class="checkbox">
-              <%= label_tag(:enabled) do %>
-                <%= preference_field_tag(:enabled, SpreeEditor::Config[:enabled], type: :boolean) %>
-                <%= Spree.t(:enable_rich_editor) %>
-              <% end %>
-            </div>
-            <div class="form-group">
-              <%= label_tag(:ids, Spree.t(:rich_editor_ids_description)) %>
-              <%= preference_field_tag(:ids, SpreeEditor::Config[:ids], class: 'control-form') %>
-            </div>
-          </fieldset>
-        </div>
-      </div>
+    <div class="field">
+      <%= label_tag(:current_editor, Spree.t(:rich_editor_engine)) %>
+      <br />
+      <%= select_tag(:current_editor, options_for_select(Spree::EditorSetting.editors, SpreeEditor::Config[:current_editor]), class: 'select2') %>
     </div>
+
+    <div class="field">
+      <%= label_tag(:enabled) do %>
+        <%= preference_field_tag(:enabled, SpreeEditor::Config[:enabled], type: :boolean) %>
+        <%= Spree.t(:enable_rich_editor) %>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= label_tag(:ids, Spree.t(:rich_editor_ids_description)) %>
+      <br />
+      <%= preference_field_tag(:ids, SpreeEditor::Config[:ids], class: 'control-form') %>
+    </div>
+
+    <div class="form-buttons filter-actions actions" data-hook="buttons">
+      <%= button Spree.t('actions.update'), 'update' %>
+    </div>
+
+
   </fieldset>
-
-  <div class="form-actions actions" data-hook="buttons">
-    <%= button Spree.t('actions.update'), 'update' %>
-  </div>
-
 <% end %>

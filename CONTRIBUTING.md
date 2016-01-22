@@ -79,5 +79,5 @@ Some things that will increase the chance that your pull request is accepted, ta
 And in case we didn't emphasize it enough: **we love tests!**
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
-[2]: https://github.com/spree-contrib/spree_editor/issues
-[3]: https://github.com/spree-contrib/spree_editor/tree/master/config/locales
+[2]: https://github.com/spree-contrib/solidus_editor/issues
+[3]: https://github.com/spree-contrib/solidus_editor/tree/master/config/locales

@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'ckeditor',      '~> 4.1.2'
-  s.add_dependency 'solidus_backend', '~> 1.2.0.rc1'
+  s.add_dependency 'solidus_backend', '~> 1.1'
   s.add_dependency 'tinymce-rails', '~> 4.2.5'
 
   s.add_development_dependency 'i18n-spec', '>= 0.5.0'

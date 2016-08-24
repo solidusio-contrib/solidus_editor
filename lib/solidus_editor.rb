@@ -1,3 +1,4 @@
+require 'solidus_backend'
 require 'ckeditor'
 require 'coffee_script'
 require 'sass/rails'

@@ -40,7 +40,7 @@ RSpec.describe Spree::Admin::EditorSettingsController, type: :controller do
   context '#edit' do
     it 'renders the edit template' do
       spree_get :edit
-      expect(response).to render_template(:edit)
+      expect(response).to be_success
     end
   end
 end

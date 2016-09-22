@@ -8,9 +8,9 @@ module SolidusEditor
   end
 
   module VERSION
-    MAJOR = 2
-    MINOR = 2
-    TINY  = 1
+    MAJOR = 1
+    MINOR = 0
+    TINY  = 0
     PRE   = nil
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')

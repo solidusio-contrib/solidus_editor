@@ -9,7 +9,7 @@ RSpec.describe Spree::Admin::EditorSettingsController, type: :controller do
 
   context '#update' do
     it 'redirects to editor settings page' do
-      spree_put :update, preferences: { enabled: true }
+      put :update, params: { preferences: { enabled: true } }
       expect(response).to redirect_to spree.edit_admin_editor_settings_path
     end
 
@@ -21,17 +21,17 @@ RSpec.describe Spree::Admin::EditorSettingsController, type: :controller do
       subject { SpreeEditor::Config }
 
       it 'sets preferred_current_editor to "CKEditor"' do
-        spree_put :update, preferences: { current_editor: 'CKEditor' }
+        put :update, params: { preferences: { current_editor: 'CKEditor' } }
         expect(subject.preferred_current_editor).to eq('CKEditor')
       end
 
       it 'sets preferred_enabled to true' do
-        spree_put :update, preferences: { enabled: true }
+        put :update, params: { preferences: { enabled: true } }
         expect(subject.preferred_enabled).to be(true)
       end
 
       it 'sets preferred_ids to product_description page_body' do
-        spree_put :update, preferences: { ids: 'product_description page_body' }
+        put :update, params: { preferences: { ids: 'product_description page_body' } }
         expect(subject.preferred_ids).to eq('product_description page_body')
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe Spree::Admin::EditorSettingsController, type: :controller do
 
   context '#edit' do
     it 'renders the edit template' do
-      spree_get :edit
+      get :edit
       expect(response).to be_success
     end
   end

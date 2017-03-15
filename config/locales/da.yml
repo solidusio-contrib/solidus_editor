@@ -1,0 +1,9 @@
+---
+da:
+  spree:
+    enable_rich_editor: Brug formateret tekst redigering
+    rich_editor: Formateret tekst
+    rich_editor_description: Opsætning af tekstformatering.
+    rich_editor_engine: Formateret tekst redigeres med
+    rich_editor_ids: Formateret tekst felt id'er
+    rich_editor_ids_description: "Liste med id'er på felter, adskilt af mellemrum, der kan redigeres som formateret tekst"

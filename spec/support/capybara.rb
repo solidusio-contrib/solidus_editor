@@ -4,9 +4,10 @@ require 'capybara/poltergeist'
 
 RSpec.configure do |config|
   Capybara.javascript_driver = :poltergeist
+  Capybara.default_max_wait_time = 60
 
   Capybara.register_driver(:poltergeist) do |app|
-    Capybara::Poltergeist::Driver.new app, js_errors: true, timeout: 40
+    Capybara::Poltergeist::Driver.new app, js_errors: true, timeout: 120
   end
 
   config.before(:each, :js) do

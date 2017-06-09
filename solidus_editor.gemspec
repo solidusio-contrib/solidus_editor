@@ -28,8 +28,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'i18n-spec', '>= 0.5.0'
   s.add_development_dependency 'guard-rspec'
-  s.add_development_dependency 'capybara', '~> 2.4.4'
-  s.add_development_dependency 'database_cleaner', '~> 1.3.0'
+  s.add_development_dependency 'capybara', '~> 2.14'
+  s.add_development_dependency 'database_cleaner', '~> 1.6'
   s.add_development_dependency 'factory_girl', '~> 4.4'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'selenium-webdriver'

@@ -42,11 +42,12 @@ If you have issues, please check their issues trackers first.
 
 ## Configuration
 
-Preferences can be updated within the admin panel under "configuration" then "rich editor".
-
-Or you may set them with an initializer within your application:
+solidus\_editor should be configured inside an initializer
 
 ```ruby
+# Required if using solidus_frontend
+Spree::Config[:show_raw_product_description] = true
+
 SpreeEditor::Config.tap do |config|
   config.ids = 'product_description page_body event_body'
 
@@ -55,14 +56,14 @@ SpreeEditor::Config.tap do |config|
 end
 ```
 
-The default preference is:
+Solidus itself should be configured to show
+
+The default values are:
 
 ```ruby
-{
-  enabled: true,
-  current_editor: 'TinyMCE',
-  ids: 'product_description page_body'
-}
+config.enabled = true,
+config.current_editor = 'TinyMCE',
+config.ids = 'product_description page_body'
 ```
 
 ---

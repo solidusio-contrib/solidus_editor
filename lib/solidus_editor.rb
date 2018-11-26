@@ -1,7 +1,5 @@
 require 'solidus_backend'
 require 'ckeditor'
-require 'coffee_script'
-require 'sass/rails'
 require 'solidus_core'
 require 'solidus_editor/version'
 require 'spree_editor/config'

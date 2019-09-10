@@ -1,5 +1,7 @@
 # Solidus Editor
 
+[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_editor.svg?style=svg)](https://circleci.com/gh/solidusio-contrib/solidus_editor)
+
 This extension provides an inline rich-text editor for Solidus. It is based off [spree_editor](https://github.com/spree-contrib/spree_editor). It implements different types of editors:
 
 - [CKEditor][1]

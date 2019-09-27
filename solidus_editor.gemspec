@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ckeditor',      '~> 4.1'
   s.add_dependency 'deface',        ['>= 1.0.2', '< 1.4']
   s.add_dependency 'solidus_backend', ['>= 1.0', '< 3']
-  s.add_dependency 'tinymce-rails', '~> 4.2.5'
+  s.add_dependency 'tinymce-rails', '>= 4.2.5', '< 5.1.0'
 
   s.add_development_dependency 'i18n-spec', '>= 0.5.0'
   s.add_development_dependency 'guard-rspec'

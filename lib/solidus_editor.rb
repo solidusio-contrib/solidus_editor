@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'solidus_backend'
 require 'ckeditor'
 require 'solidus_core'

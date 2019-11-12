@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Spree
   class EditorSetting < Preferences::Configuration
     preference :enabled,        :boolean, default: true

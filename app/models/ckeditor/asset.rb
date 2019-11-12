@@ -1,4 +1,8 @@
-class Ckeditor::Asset < ActiveRecord::Base
-  include Ckeditor::Orm::ActiveRecord::AssetBase
-  include Ckeditor::Backend::Paperclip
+# frozen_string_literal: true
+
+module Ckeditor
+  class Asset < ApplicationRecord
+    include Ckeditor::Orm::ActiveRecord::AssetBase
+    include Ckeditor::Backend::Paperclip
+  end
 end

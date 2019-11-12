@@ -14,4 +14,6 @@ end
 
 gem 'rails-controller-testing'
 
+gem 'solidus_extension_dev_tools', github: 'solidusio-contrib/solidus_extension_dev_tools'
+
 gemspec

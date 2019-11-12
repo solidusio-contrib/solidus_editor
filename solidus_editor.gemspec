@@ -1,5 +1,6 @@
-# coding: utf-8
-lib = File.expand_path('../lib/', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 
 require 'solidus_editor/version'
@@ -21,20 +22,11 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'ckeditor',      '~> 4.1'
-  s.add_dependency 'deface',        ['>= 1.0.2', '< 1.4']
+  s.add_dependency 'ckeditor', '~> 4.1'
+  s.add_dependency 'deface', ['>= 1.0.2', '< 2']
   s.add_dependency 'solidus_backend', ['>= 1.0', '< 3']
-  s.add_dependency 'tinymce-rails', '~> 4.2.5'
+  s.add_dependency 'tinymce-rails', '~> 4.2'
 
-  s.add_development_dependency 'i18n-spec', '>= 0.5.0'
-  s.add_development_dependency 'guard-rspec'
-  s.add_development_dependency 'capybara', '~> 2.14'
-  s.add_development_dependency 'database_cleaner', '~> 1.6'
-  s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'selenium-webdriver'
-  s.add_development_dependency 'poltergeist', '~> 1.9'
-  s.add_development_dependency 'simplecov', '~> 0.9.0'
-  s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'rspec-rails', '~> 3.4'
-  s.add_development_dependency 'rubocop', '>= 0.24.1'
+  s.add_development_dependency 'i18n-spec'
+  s.add_development_dependency 'solidus_extension_dev_tools'
 end

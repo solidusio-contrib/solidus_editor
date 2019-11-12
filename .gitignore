@@ -11,3 +11,4 @@ coverage
 spec/dummy
 .ruby-version
 .ruby-gemset
+spec/examples.txt

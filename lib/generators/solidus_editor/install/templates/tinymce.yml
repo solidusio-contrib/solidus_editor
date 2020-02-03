@@ -16,7 +16,6 @@ schema: "html5-strict"
 element_format: "html"
 resize: true
 plugins:
-  - layer
   - table
   - insertdatetime
   - preview

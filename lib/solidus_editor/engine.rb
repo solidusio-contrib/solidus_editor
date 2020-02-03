@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
+require 'spree/core'
+
 module SolidusEditor
   class Engine < Rails::Engine
+    include SolidusSupport::EngineExtensions::Decorators
+
     isolate_namespace Spree
+
     engine_name 'solidus_editor'
 
     initializer 'solidus_editor.preferences', before: :load_config_initializers do
@@ -13,15 +18,9 @@ module SolidusEditor
       end
     end
 
-    config.autoload_paths += %W(#{config.root}/lib)
-
-    def self.activate
-      cache_klasses = %W(#{config.root}/app/**/*_decorator*.rb)
-      Dir.glob(cache_klasses) do |klass|
-        Rails.configuration.cache_classes ? require(klass) : load(klass)
-      end
+    # use rspec for tests
+    config.generators do |g|
+      g.test_framework :rspec
     end
-
-    config.to_prepare(&method(:activate).to_proc)
   end
 end

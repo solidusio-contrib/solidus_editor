@@ -2,7 +2,8 @@
 
 require 'solidus_backend'
 require 'ckeditor'
-require 'solidus_core'
+require 'solidus_support'
+
 require 'solidus_editor/version'
 require 'spree_editor/config'
 require 'solidus_editor/engine'

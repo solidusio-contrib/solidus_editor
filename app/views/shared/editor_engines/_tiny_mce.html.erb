@@ -1,12 +1,9 @@
 <%= javascript_include_tag 'tinymce-jquery' %>
 
 <script>
-  $(function () {
+  Spree.ready(function () {
     /* Inject each textarea id with .tinymce class required for TinyMCE 4 */
     $('<%= raw ids.each.map{|id| "textarea##{id}" }.join(", ") %>').addClass('tinymce');
-  });
-
-  $(document).ready(function () {
     $('<%= raw ids.each.map{|id| "textarea##{id}" }.join(", ") %>').tinymce(
       <%= raw TinyMCE::Rails.configuration.options.to_json %>);
   });

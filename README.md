@@ -82,9 +82,22 @@ TinyMCE will not be loaded unless it finds a language package matching your `Spr
 
 ---
 
-## Contributing
+Testing
+-------
 
-See corresponding [guidelines][8]
+First bundle your dependencies, then run `rake`. `rake` will default to building the dummy app if it does not exist, then it will run specs, and [Rubocop](https://github.com/bbatsov/rubocop) static code analysis.
+
+```shell
+bundle
+bundle exec rake
+```
+
+When testing your application's integration with this extension you may use its factories.
+Simply add this require statement to your spec_helper:
+
+```ruby
+require 'solidus_editor/factories'
+```
 
 ---
 

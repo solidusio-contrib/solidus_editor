@@ -8,11 +8,6 @@ module SolidusEditor
 
       def add_javascripts
         append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/solidus_editor\n"
-
-        sprockets_version = Gem::Version.new(Sprockets::VERSION)
-        if sprockets_version >= Gem::Version.new('4') && sprockets_version < Gem::Version.new('5')
-          append_file 'app/assets/config/manifest.js', "//= link tinymce-jquery.js\n"
-        end
       end
 
       def add_stylesheets

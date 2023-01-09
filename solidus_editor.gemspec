@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ckeditor', '~> 4.3'
   s.add_dependency 'deface', ['>= 1.0.2', '< 2']
   s.add_dependency 'solidus_backend', ['>= 2.0.0', '< 4']
-  s.add_dependency 'tinymce-rails', '~> 4.2'
+  s.add_dependency 'tinymce-rails', '~> 6.3'
   s.add_dependency 'solidus_support', '~> 0.6'
 
   s.add_development_dependency 'i18n-spec'

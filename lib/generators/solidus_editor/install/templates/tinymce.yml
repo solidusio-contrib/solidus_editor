@@ -5,13 +5,12 @@
 # customise your TinyMCE setup in your spree installation. If you wish to see the full
 # range of configuration options then please go here:
 #
-#    http://www.tinymce.com/wiki.php/configuration
+#    https://www.tiny.cloud/docs/tinymce/6/
 
 # TinyMCE Options
-mode: "exact"
-theme: "modern"
+theme: "silver"
 language: "<%= I18n.locale.to_s.split('-')[0].downcase %>"
-skin: "lightgray"
+skin: "oxide"
 schema: "html5-strict"
 element_format: "html"
 resize: true
@@ -21,11 +20,8 @@ plugins:
   - preview
   - media
   - searchreplace
-  - contextmenu
-  - paste
   - directionality
   - fullscreen
-  - noneditable
   - visualchars
   - nonbreaking
   - template
